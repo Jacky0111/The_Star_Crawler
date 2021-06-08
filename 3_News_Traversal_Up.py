@@ -46,11 +46,6 @@ print(len(links_list))
 driver.refresh()
 
 for index in range(len(links_list)):
-    # for index, element in enumerate(links_list):
-    #     if index <= 15:
-    #         xpath = f".//main//div[5]//h2/a[@href = '{element}']"
-    #     else:
-    #         xpath = f".//main//div[6]/div/div/div[2]//h2/a[@href = '{element}']"
     try:
         to_travel = driver.find_element_by_link_text(links_list[index])
         driver.execute_script("arguments[0].click();", to_travel)
@@ -66,7 +61,6 @@ for index in range(len(links_list)):
     except TimeoutException:
         print(index + 1)
         continue
-    # finally:
     time.sleep(5)
 
 driver.close()

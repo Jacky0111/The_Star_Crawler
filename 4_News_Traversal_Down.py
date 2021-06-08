@@ -44,14 +44,5 @@ for index in range(22, 28):
     driver.back()
     load_more = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.LINK_TEXT, "Load More"))).click()
-# many = []
-# for i, j in zip(travel1, travel2):
-#     many.append(i.text)
-#     many.append(j.text)
-# print(many)
-# for i in travel:
-#     many.append(i.get_attribute('href'))
-#     # many.append(i.text)
-# print(many)
 
 driver.close()
