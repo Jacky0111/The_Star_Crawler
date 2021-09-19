@@ -89,10 +89,9 @@ print(f'No. of non-duplicated link: {len(filtered_links)}')
 
 # Considering the Food category contains some recipes which will lead to another web page.
 # Therefore I decided to remove non The Star link here
-for i in range(5):
-    for i, ele in enumerate(filtered_links):
-        if not ele.startswith('https://www.thestar.com.my/'):
-            del filtered_links[i]
+for i, ele in enumerate(filtered_links):
+    if not ele.startswith('https://www.thestar.com.my/'):
+        del filtered_links[i]
 print(f'No. of non-TheStar link: {len(filtered_links)}')
 
 # Browse through each url and crawl the news content
